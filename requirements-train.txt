@@ -1,0 +1,4 @@
+# Optional: only needed to re-train the models with the bundled sample photos
+-r requirements.txt
+scikit-image>=0.22
+scikit-learn>=1.4

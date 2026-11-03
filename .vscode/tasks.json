@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start NeuroCompress (backend + frontend)",
+      "type": "shell",
+      "command": "bash scripts/start.sh",
+      "windows": { "command": "powershell -ExecutionPolicy Bypass -File scripts\\start.ps1" },
+      "isBackground": true,
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "Run all tests",
+      "type": "shell",
+      "command": "python3 scripts/run_tests.py",
+      "windows": { "command": "python scripts\\run_tests.py" },
+      "problemMatcher": [],
+      "group": "test"
+    },
+    {
+      "label": "Frontend: type-check",
+      "type": "shell",
+      "command": "npm run typecheck",
+      "options": { "cwd": "${workspaceFolder}/frontend" },
+      "problemMatcher": ["$tsc"]
+    }
+  ]
+}

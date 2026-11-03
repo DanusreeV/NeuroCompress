@@ -1,0 +1,13 @@
+{
+  "name": "neurocompress",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Convenience scripts; the real frontend package lives in ./frontend",
+  "scripts": {
+    "install:frontend": "npm --prefix frontend install",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build",
+    "typecheck": "npm --prefix frontend run typecheck",
+    "test": "python scripts/run_tests.py"
+  }
+}

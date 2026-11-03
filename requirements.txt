@@ -1,0 +1,9 @@
+# Runtime
+fastapi>=0.110,<1.0
+uvicorn>=0.27
+python-multipart>=0.0.9
+numpy>=1.26
+pillow>=10.2
+psutil>=5.9
+# Tests (HTTP-level API tests use FastAPI's TestClient)
+httpx>=0.27

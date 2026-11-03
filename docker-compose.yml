@@ -1,0 +1,16 @@
+# Optional: docker compose up --build   ->  http://localhost:8080
+services:
+  backend:
+    build: { context: ., dockerfile: Dockerfile.backend }
+    environment:
+      NC_MAX_UPLOAD_MB: "20"
+      NC_MAX_PIXELS: "1048576"
+    volumes:
+      - nc-data:/data
+  frontend:
+    build: { context: ., dockerfile: Dockerfile.frontend }
+    ports:
+      - "8080:80"
+    depends_on: [backend]
+volumes:
+  nc-data:
